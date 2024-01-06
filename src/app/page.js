@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function Page() {
   useEffect(() => {
     const getData = async () => {
-      let response = await fetch("/api", {
+      let response = await fetch("/api/index", {
         method: "GET",
       });
       let json = await response.json();
