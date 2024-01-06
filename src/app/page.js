@@ -1,11 +1,18 @@
-import Header from "@/components/header";
-import Image from "next/image";
+"use client";
 
-export default function Home() {
-  return (
-    <div className="bg-white w-full rounded-lg page p-6 flex flex-col">
-      <Header />
-      <div className="bg-green-300 rounded-lg h-1 my-2"></div>
-    </div>
-  );
+import { useEffect } from "react";
+
+export default function Page() {
+  useEffect(() => {
+    const getData = async () => {
+      let response = await fetch("/api", {
+        method: "GET",
+      });
+      let json = await response.json();
+      console.log(json);
+    };
+    getData();
+  }, []);
+
+  return <div></div>;
 }
