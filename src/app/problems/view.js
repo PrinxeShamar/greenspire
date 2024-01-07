@@ -6,7 +6,7 @@ export default function View({ problems }) {
   const router = useRouter();
 
   return (
-    <div className="overflow-y-scroll flex-1 flex flex-col">
+    <div className="flex-1 flex flex-col">
       {problems.map((problem, index) => {
         return (
           <div
